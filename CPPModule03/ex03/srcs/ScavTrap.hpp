@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 11:27:24 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 12:50:22 by schuah           ###   ########.fr       */
+/*   Created: 2022/08/21 13:19:47 by schuah            #+#    #+#             */
+/*   Updated: 2022/08/22 14:42:47 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_CPP
-# define CLAPTRAP_CPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include <iostream>
-# include <string>
+# include "ClapTrap.hpp"
 
-class ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		/* Orthrodox canonical form */
-		ClapTrap();
-		ClapTrap(const ClapTrap &src);
-		virtual				~ClapTrap();
-		ClapTrap			&operator=(const ClapTrap &src);
+		ScavTrap();
+		ScavTrap(const std::string &name);
+		ScavTrap(const ScavTrap &src);
+		virtual			~ScavTrap();
+		ScavTrap		&operator=(const ScavTrap &src);
 		
 		/* Member functions */
-		void				attack(const std::string &target);
-		void				takeDamage(unsigned int amount);
-		void				beRepaired(unsigned int amount);
-		const std::string	&getName();
-		unsigned int		getHp();
-		unsigned int		getEp();
-		unsigned int		getAd();
+		void			attack(const std::string &target);
+		void			guardGate();
 	protected:
 		std::string			_name;
 		unsigned int		_hp;

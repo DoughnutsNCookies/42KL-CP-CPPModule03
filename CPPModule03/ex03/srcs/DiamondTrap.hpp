@@ -1,43 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 11:27:24 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 12:50:22 by schuah           ###   ########.fr       */
+/*   Created: 2022/08/22 12:20:21 by schuah            #+#    #+#             */
+/*   Updated: 2022/08/22 14:34:35 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_CPP
-# define CLAPTRAP_CPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-# include <iostream>
-# include <string>
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-class ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
 		/* Orthrodox canonical form */
-		ClapTrap();
-		ClapTrap(const ClapTrap &src);
-		virtual				~ClapTrap();
-		ClapTrap			&operator=(const ClapTrap &src);
-		
+		DiamondTrap();
+		DiamondTrap(const std::string &name);
+		DiamondTrap(const DiamondTrap &src);
+		virtual				~DiamondTrap();
+		DiamondTrap			&operator=(const DiamondTrap &src);
+
 		/* Member functions */
-		void				attack(const std::string &target);
-		void				takeDamage(unsigned int amount);
-		void				beRepaired(unsigned int amount);
-		const std::string	&getName();
+		using ScavTrap::attack;
+		std::string			&getName();
 		unsigned int		getHp();
 		unsigned int		getEp();
 		unsigned int		getAd();
-	protected:
-		std::string			_name;
-		unsigned int		_hp;
-		unsigned int		_ep;
-		unsigned int		_ad;
+		void				whoAmI();
+		
+	private:
+		std::string		_name;
+		using FragTrap::_hp;
+		using ScavTrap::_ep;
+		using FragTrap::_ad;
+
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 11:27:24 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 12:50:22 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/22 13:37:57 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ClapTrap
 		/* Orthrodox canonical form */
 		ClapTrap();
 		ClapTrap(const ClapTrap &src);
+		ClapTrap(const std::string &name);
 		virtual				~ClapTrap();
 		ClapTrap			&operator=(const ClapTrap &src);
 		

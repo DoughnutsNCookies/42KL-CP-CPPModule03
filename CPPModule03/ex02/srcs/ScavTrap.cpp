@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 13:25:09 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 13:11:39 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/22 12:03:29 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap()
 	this->_ad = 20;
 }
 
-/* Constructor function for string input of ScavTrap class */
+/* Constructor function string input of ScavTrap class */
 ScavTrap::ScavTrap(const std::string &name)
 {
 	std::cout << "(ScavTrap) Constructor function with string input has been called" << std::endl;
@@ -79,7 +79,7 @@ void	ScavTrap::guardGate()
 {
 	if (this->_ep > 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " is in Gate keeper mode" <<std::endl;
+		std::cout << "ScavTrap" << this->_name << " is in Gate keeper mode" <<std::endl;
 		this->_ep--;
 		std::cout << "ScavTrap " << this->_name << " Ep has been reduced to "
 			<< this->_ep << std::endl;

@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 12:41:41 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/21 13:58:18 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/22 12:11:38 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int main()
     b.takeDamage(3);
     ClapTrap c;
     c = b;
-    b.takeDamage(3);
-	b.takeDamage(999);
-	b.beRepaired(1);
-	b.beRepaired(100);
+    c.takeDamage(3);
+	c.takeDamage(999);
+	c.beRepaired(1);
+	c.beRepaired(100);
 	for (int i = 0; i < 10; i++)
-		b.attack("noob");
+		c.attack("noob");
 	return (0);
 }
