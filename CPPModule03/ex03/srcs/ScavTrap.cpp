@@ -79,7 +79,7 @@ void	ScavTrap::guardGate()
 {
 	if (this->_ep > 0)
 	{
-		std::cout << "ScavTrap" << this->_name << " is in Gate keeper mode" <<std::endl;
+		std::cout << "ScavTrap " << this->_name << " is in Gate keeper mode" <<std::endl;
 		this->_ep--;
 		std::cout << "ScavTrap " << this->_name << " Ep has been reduced to "
 			<< this->_ep << std::endl;
