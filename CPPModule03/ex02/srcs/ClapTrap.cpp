@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 11:30:48 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/21 13:53:16 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/29 15:32:09 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ClapTrap::~ClapTrap()
 	std::cout << "(ClapTrap) Destructor function has been called" << std::endl;
 }
 
-/* Copy Assignation operator function of ClapTrap class */
+/* Copy assignation operator function of ClapTrap class */
 ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
 {
 	this->_name = src._name;

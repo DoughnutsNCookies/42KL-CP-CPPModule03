@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 13:25:09 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 13:11:39 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/29 15:32:09 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "(ScavTrap) Destructor function has been called" << std::endl;
 }
 
-/* Copy Assignation operator function of ScavTrap class */
+/* Copy assignation operator function of ScavTrap class */
 ScavTrap	&ScavTrap::operator=(const ScavTrap &src)
 {
 	this->_name = src._name;

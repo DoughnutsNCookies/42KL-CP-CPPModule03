@@ -6,7 +6,7 @@
 /*   By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 12:01:16 by schuah            #+#    #+#             */
-/*   Updated: 2022/08/22 13:11:20 by schuah           ###   ########.fr       */
+/*   Updated: 2022/08/29 15:32:09 by schuah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ FragTrap::~FragTrap()
 	std::cout << "(FragTrap) Destructor function has been called" << std::endl;
 }
 
-/* Copy Assignation operator function of FragTrap class */
+/* Copy assignation operator function of FragTrap class */
 FragTrap	&FragTrap::operator=(const FragTrap &src)
 {
 	this->_name = src._name;
