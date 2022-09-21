@@ -6,14 +6,14 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 10:52:13 by schuah            #+#    #+#              #
-#    Updated: 2022/08/21 12:42:14 by schuah           ###   ########.fr        #
+#    Updated: 2022/09/21 14:25:01 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	clapTrap
-CC			=	c++
+CXX			=	c++
 RM			=	rm -f
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS_FILES	=	main \
 				ClapTrap
 SRCS		= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))
@@ -26,10 +26,10 @@ all:
 				make $(NAME)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.cpp
-				$(CC) $(CFLAGS) -c $< -o $@
+				$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME):		$(OBJS)
-				$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+				$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 				rm -rf $(OBJS_DIR)
