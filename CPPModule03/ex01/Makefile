@@ -6,13 +6,14 @@
 #    By: schuah <schuah@student.42kl.edu.my>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 10:52:13 by schuah            #+#    #+#              #
-#    Updated: 2022/08/21 13:54:30 by schuah           ###   ########.fr        #
+#    Updated: 2023/03/01 14:14:02 by schuah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	scavTrap
 CC			=	c++
-RM			=	rm -f
+RM			=	rm -rf
+MKDIR		=	mkdir -p
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS_FILES	=	main \
 				ClapTrap \
@@ -23,7 +24,7 @@ SRCS_DIR	=	srcs/
 OBJS_DIR	=	objs/
 
 all:
-				mkdir -p $(OBJS_DIR)
+				$(MKDIR) $(OBJS_DIR)
 				make $(NAME)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.cpp
@@ -33,10 +34,10 @@ $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 clean:
-				rm -rf $(OBJS_DIR)
+				$(RM) $(OBJS_DIR)
 
 fclean:			clean
-				rm -rf $(NAME)
+				$(RM) $(NAME)
 
 re:				fclean all
 
